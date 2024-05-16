@@ -18,4 +18,4 @@ jobs:
           -F from='Mailgun Sandbox <postmaster@sandbox578929e814e844ed920095209f77b678.mailgun.org>'  \
           -F to='Thibault DUPONCHELLE <thibault@deriv.com>'  \
           -F subject='Report domains'  \
-          -F text='`cat report.txt`'
+          -F text="`cat report.txt`"
