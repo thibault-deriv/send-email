@@ -1,4 +1,4 @@
-name: Checking expiration date of domains
+name: Send emails
 on: 
   push:
 
@@ -18,4 +18,4 @@ jobs:
           -F from='Mailgun Sandbox <postmaster@sandbox578929e814e844ed920095209f77b678.mailgun.org>'  \
           -F to='Thibault DUPONCHELLE <thibault@deriv.com>'  \
           -F subject='Hello Thibault DUPONCHELLE'  \
-          -F text='From GitHub Action`
+          -F text='From GitHub Action'
