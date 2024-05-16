@@ -1,0 +1,21 @@
+name: Checking expiration date of domains
+on: 
+  push:
+
+env:
+  APIKEY: ${{ secrets.APIKEY }}    
+
+jobs:
+  check-expiration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Push report
+        run: |
+          curl -s --user 'api:${{ env.APIKEY }}'  \
+          https://api.mailgun.net/v3/sandbox578929e814e844ed920095209f77b678.mailgun.org/messages  \
+          -F from='Mailgun Sandbox <postmaster@sandbox578929e814e844ed920095209f77b678.mailgun.org>'  \
+          -F to='Thibault DUPONCHELLE <thibault@deriv.com>'  \
+          -F subject='Hello Thibault DUPONCHELLE'  \
+          -F text='From GitHub Action`
