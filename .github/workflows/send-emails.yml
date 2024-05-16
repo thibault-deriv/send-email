@@ -6,7 +6,7 @@ env:
   APIKEY: ${{ secrets.APIKEY }}    
 
 jobs:
-  check-expiration:
+  send-mail:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
