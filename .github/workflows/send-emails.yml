@@ -15,7 +15,7 @@ jobs:
         run: |
           curl -s --user 'api:${{ env.APIKEY }}'  \
           https://api.mailgun.net/v3/sandbox578929e814e844ed920095209f77b678.mailgun.org/messages  \
-          -F from='Domain Expiration Automation <postmaster@sandbox578929e814e844ed920095209f77b678.mailgun.org>'  \
+          -F from='Domain Expiration Automation <postmaster@sandbox.mgsend.net>'  \
           -F to='Thibault DUPONCHELLE <thibault@deriv.com>'  \
           -F subject='Report domains expiration (test forward no spam)'  \
           -F text="`cat report.txt`"
