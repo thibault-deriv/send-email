@@ -17,5 +17,5 @@ jobs:
           https://api.mailgun.net/v3/sandbox578929e814e844ed920095209f77b678.mailgun.org/messages  \
           -F from='Mailgun Sandbox <postmaster@sandbox578929e814e844ed920095209f77b678.mailgun.org>'  \
           -F to='Thibault DUPONCHELLE <thibault@deriv.com>'  \
-          -F subject='Hello Thibault DUPONCHELLE'  \
-          -F text='From GitHub Action'
+          -F subject='Report domains'  \
+          -F text='`cat report.txt`'
